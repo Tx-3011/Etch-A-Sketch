@@ -13,7 +13,7 @@ function createDiv(boxSize){
     
     div.style.height = boxSize
     div.style.width = boxSize
-    // div.style.backgroundColor = '#84c7e3'
+    div.style.backgroundColor = '#84c7e3'
     // div.style.border= '1px solid black'
 
     return div
@@ -35,11 +35,14 @@ createGrid(initialBoxes,initialBoxSize)
 
 const allBox = document.querySelectorAll(".box")
 
+
+function hoverEffect(){
 allBox.forEach((box)=>{
     box.addEventListener('mouseover',function(){
         this.style.backgroundColor = "red"
     })
 })
+}
 
 
 function DeleteAllBoxes(){
@@ -52,7 +55,6 @@ function DeleteAllBoxes(){
 
 submit.addEventListener('click',()=>{
 
-    //add solution for CornerCase: if input is 0
     if(input.value>100 || input.value<0){
         alert("Please enter a positive value below 100")
         return
@@ -60,14 +62,16 @@ submit.addEventListener('click',()=>{
 
     DeleteAllBoxes()
 
-    noOfBoxes = input.value
-    let size = 50/noOfBoxes
+    noOfBoxes = Math.pow(input.value,2) 
+    let size = `${50/Math.sqrt(noOfBoxes)}rem`
     
-    createGrid(noOfBoxes)
-    
+    createGrid(noOfBoxes,size)
+    hoverEffect()
 
 
 })
+
+hoverEffect()
 
 
 
