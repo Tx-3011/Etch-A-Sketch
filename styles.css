@@ -11,6 +11,7 @@
     width: 100%;
     background-color: #2D2A32;
     margin-top: 8.5rem;
+    top: 0;
 }
 
 .allColors{
@@ -21,12 +22,14 @@
 
 .red,
 .blue,
-.black{
+.black,
+.customColor{
     height: 2rem;
     width: 2rem;
     margin-right: 2rem;
     border-radius: 15px;
     border: 1.6px solid #2D2A32;
+    font-family: "inter",sans-serif;
 }
 
 .red{
@@ -40,6 +43,22 @@
 .black{
     background-color: #2d2a32;
 }
+
+.custom{
+    height: 2rem;
+    width: 6rem;
+    background-color: #e7e986;
+    border-radius: 10px;
+    border: 1px solid #2D2A32;
+}
+
+#customColor{
+    margin: 3px;
+    margin-left: 0.5rem;
+    width: 2rem;
+}
+
+
 
 .title{
     margin-top: 10px;

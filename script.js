@@ -5,6 +5,8 @@ const submit = document.querySelector("#submit")
 const red = document.querySelector("#red")
 const blue = document.querySelector("#blue")
 const black = document.querySelector("#black")
+const customColor = document.querySelector("#colorPicker")
+const customBG = document.querySelector("#custom")
 
 let initialBoxSize = '3.125rem'
 let initialBoxes=256
@@ -21,6 +23,15 @@ blue.addEventListener('click',()=>{
 
 black.addEventListener('click',()=>{
     hoverColor = "#2D2A32"
+})
+
+// colorPicker.addEventListener('click',()=>{
+//     // // hoverColor = `${customColor.value}`
+//     // customBG.style.backgroundColor = `${customColor.value}`
+// })
+
+customBG.addEventListener('mouseover',()=>{
+    hoverColor = customColor.value
 })
 
 
