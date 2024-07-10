@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    border: 2px solid gray;
+    border: 2px double gray;
     height: 50rem;
     width: 50rem;
 }
@@ -27,7 +27,9 @@ body{
 
 
 .box{
-   background-color:#84c7e3;
+   background-color:whitesmoke;
    
 }
+
+
 
