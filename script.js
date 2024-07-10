@@ -1,6 +1,6 @@
 const boxGrid = document.querySelector("#boxes")
 const body = document.querySelector("body")
-const allBox = document.querySelectorAll(".box")
+
 
 function createDiv(){
     let div = document.createElement("div")
@@ -27,14 +27,16 @@ function createGrid(){
 
 }
 
-
-// for(let i=0;i<256;i++){
-//     allBox[i].addEventListener('mouseover',()=>{
-        
-//     })
-// }
-
 createGrid()
+
+const allBox = document.querySelectorAll(".box")
+
+for(let i=0;i<256;i++){
+    allBox[i].addEventListener('mouseover',function(){
+        this.style.backgroundColor = "red"
+    })
+
+}
 
 
 
