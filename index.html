@@ -8,10 +8,20 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="titleDiv">
+        <h1 class="title">Etch-A-Sketch</h1>
+    </div>
     <div class="menu">
         <p>Enter number of boxes on each side : </p>
-        <input id="input" class="input" type="number" max="99" min="1">
-        <button id="submit" class="submit">submit</button>
+            <div class="inputAndSubmit">
+                <input id="input" class="input" type="number" max="99" min="1">
+                <button id="submit" class="submit">Submit</button>
+            </div>
+            <div class="allColors" id="allColors">
+                <button class="red" id="red"></button>
+                <button class="blue" id="blue"></button>
+                <button class="black" id="black"></button>
+            </div>
 
     </div>
     <div class="boxes" id="boxes">

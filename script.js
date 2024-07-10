@@ -2,9 +2,28 @@ const boxGrid = document.querySelector("#boxes")
 const body = document.querySelector("body")
 const input = document.querySelector("#input")
 const submit = document.querySelector("#submit")
+const red = document.querySelector("#red")
+const blue = document.querySelector("#blue")
+const black = document.querySelector("#black")
 
 let initialBoxSize = '3.125rem'
 let initialBoxes=256
+
+let hoverColor = "#2D2A32"
+
+red.addEventListener('click',()=>{
+    hoverColor = "red"
+})
+
+blue.addEventListener('click',()=>{
+    hoverColor = "skyblue"
+})
+
+black.addEventListener('click',()=>{
+    hoverColor = "#2D2A32"
+})
+
+
 
 
 function createDiv(boxSize){
@@ -13,12 +32,14 @@ function createDiv(boxSize){
     
     div.style.height = boxSize
     div.style.width = boxSize
-    div.style.backgroundColor = '#84c7e3'
+    div.style.backgroundColor = 'whitesmoke'
     // div.style.border= '1px solid black'
 
     return div
 
 }
+
+
 
 function createGrid(totalBoxes,boxSize){
     let boxArray = []
@@ -34,13 +55,11 @@ function createGrid(totalBoxes,boxSize){
 createGrid(initialBoxes,initialBoxSize)
 
 
-
-
 function hoverEffect(){
     const allBox = document.querySelectorAll(".box")
     allBox.forEach((box)=>{
     box.addEventListener('mouseover',function(){
-        this.style.backgroundColor = "red"
+        this.style.backgroundColor = hoverColor
     })
 })
 }
