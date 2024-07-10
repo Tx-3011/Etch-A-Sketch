@@ -33,11 +33,12 @@ function createGrid(totalBoxes,boxSize){
 
 createGrid(initialBoxes,initialBoxSize)
 
-const allBox = document.querySelectorAll(".box")
+
 
 
 function hoverEffect(){
-allBox.forEach((box)=>{
+    const allBox = document.querySelectorAll(".box")
+    allBox.forEach((box)=>{
     box.addEventListener('mouseover',function(){
         this.style.backgroundColor = "red"
     })
