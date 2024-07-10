@@ -6,11 +6,10 @@ function createDiv(){
     let div = document.createElement("div")
     div.className = "box"
     
-    div.style.height = '0'
-    div.style.width = '5.7%'
-    div.style.paddingBottom = '5.7%'
+    div.style.height = '3.125rem'
+    div.style.width = '3.125rem'
     // div.style.backgroundColor = '#84c7e3'
-    div.style.border = '1px solid black'
+    // div.style.border= '1px solid black'
 
     return div
 
@@ -31,12 +30,11 @@ createGrid()
 
 const allBox = document.querySelectorAll(".box")
 
-for(let i=0;i<256;i++){
-    allBox[i].addEventListener('mouseover',function(){
+allBox.forEach((box)=>{
+    box.addEventListener('mouseover',function(){
         this.style.backgroundColor = "red"
     })
-
-}
+})
 
 
 

@@ -1,23 +1,33 @@
 *{
-    margin: 2px;
+    margin: 0;
     padding: 0;
 }
 
 .boxes{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid gray;
+    height: 50rem;
+    width: 50rem;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
 }
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 
 .box{
    background-color:#84c7e3;
+   
 }
-.box:hover{
-    background-color: red;
-}
+
